@@ -1,0 +1,165 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Copy of PRO-C111-Project-Boilerplate.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/fluffy1111/100/blob/main/PRO_C111\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Clone the required dataset from given "
+      ],
+      "metadata": {
+        "id": "bde4NTpm1yeU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gtUMfFE5TEQH",
+        "outputId": "51822f4d-6d43-4a52-a51b-31342ec9c7d7"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'Pro-M3-Hurricane-Damage-Dataset'...\n",
+            "remote: Enumerating objects: 800, done.\u001b[K\n",
+            "remote: Counting objects: 100% (800/800), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (799/799), done.\u001b[K\n",
+            "remote: Total 800 (delta 0), reused 800 (delta 0), pack-reused 0\u001b[K\n",
+            "Receiving objects: 100% (800/800), 2.07 MiB | 12.40 MiB/s, done.\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Cloning the required dataset\n",
+        "!git clone https://github.com/procodingclass/Pro-M3-Hurricane-Damage-Dataset"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Display first image from training dataset"
+      ],
+      "metadata": {
+        "id": "k5HIz63Y2nUk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Display image\n",
+        "import tensorflow\n",
+        "from matplotlib import pyplot\n",
+        "from matplotlib.image import imread\n",
+        "from tensorflow.keras.preprocessing.image import ImageDataGenerator\n",
+        "\n",
+        "training_damaged_image = \"/content/Pro-M3-Hurricane-Damage-Dataset/train/damage/image (1).jpeg\"\n",
+        "training_image_directory = \"/contest/Pro-M3-Hurricane-Damage-Dataset/train\"\n",
+        "\n",
+        "# load image pixels\n",
+        "image = imread(training_damaged_image)\n",
+        "\n",
+        "training_data_genderater = ImageDataGenerator(zoom_range=0.3\n",
+        "                                              horizontal_flip=True,\n",
+        "                                              fill_mode='nearest')\n",
+        "\n",
+        "pyplot.title(\"damaged: Image 1\")\n",
+        "\n",
+        "# plot raw pixel data\n",
+        "pyplot.imshow(image)\n",
+        "\n",
+        "# show the figure\n",
+        "pyplot.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 130
+        },
+        "id": "6ijFdUrDUVuq",
+        "outputId": "71a6d93d-a9a9-4476-ba00-eea3c3570a15"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-1-fac9b06bdaf4>\"\u001b[0;36m, line \u001b[0;32m14\u001b[0m\n\u001b[0;31m    horizontal_flip=True,\u001b[0m\n\u001b[0m                  ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Perform augmentation on Training dataset"
+      ],
+      "metadata": {
+        "id": "esDB_i4S3Ju6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#zoom and horizontal flip (Or any augmentation technique of your choice)"
+      ],
+      "metadata": {
+        "id": "1MJBT44rUgGO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Visualize the augmented images in four sub-plots"
+      ],
+      "metadata": {
+        "id": "KwLb6Adv3RA-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Visualize the preprocessed image"
+      ],
+      "metadata": {
+        "id": "2rG92dF1U9HE"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
